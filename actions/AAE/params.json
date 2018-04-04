@@ -1,0 +1,78 @@
+{
+    "category": "plugins",
+    "display": "authCreate",
+    "fields": {
+        "AAF": {
+            "caption": "username",
+            "editor": "DynamicValue",
+            "name": "username",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAG": {
+            "caption": "name",
+            "editor": "DynamicValue",
+            "name": "name",
+            "rank": 1,
+            "value": "text"
+        },
+        "AAH": {
+            "caption": "phone",
+            "editor": "DynamicValue",
+            "name": "phone",
+            "rank": 2,
+            "value": "text"
+        },
+        "AAI": {
+            "caption": "password",
+            "editor": "DynamicValue",
+            "name": "password",
+            "rank": 3,
+            "value": "text"
+        },
+        "AAJ": {
+            "caption": "role",
+            "editor": "DynamicValue",
+            "name": "role",
+            "rank": 4,
+            "value": "text"
+        },
+        "AAK": {
+            "caption": "info",
+            "editor": "DynamicValue",
+            "name": "info",
+            "rank": 5,
+            "value": "text"
+        },
+        "AAL": {
+            "caption": "country_id",
+            "editor": "DynamicValue",
+            "name": "country_id",
+            "options": "7,380",
+            "rank": 6,
+            "value": "text"
+        },
+        "AAM": {
+            "caption": "city",
+            "editor": "DynamicValue",
+            "name": "city",
+            "rank": 7,
+            "value": "text"
+        },
+        "AAN": {
+            "caption": "external_id",
+            "editor": "DynamicValue",
+            "name": "external_id",
+            "rank": 8,
+            "value": "text"
+        },
+        "AAO": {
+            "caption": "client",
+            "editor": "DynamicValue",
+            "name": "client",
+            "rank": 9,
+            "value": "text"
+        }
+    },
+    "type": "client_side"
+}

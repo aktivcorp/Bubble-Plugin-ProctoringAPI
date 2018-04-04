@@ -1,5 +1,19 @@
 {
     "dependencies": {
         "use_jquery": true
+    },
+    "shared_keys": {
+        "ABT": {
+            "caption": "api_host",
+            "type": "client_safe"
+        },
+        "ABU": {
+            "caption": "wowza_host",
+            "type": "client_safe"
+        },
+        "ABp": {
+            "caption": "test",
+            "type": "client_safe"
+        }
     }
 }

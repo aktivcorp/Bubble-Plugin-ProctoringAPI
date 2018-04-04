@@ -1,0 +1,24 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 240,
+        "width": 320
+    },
+    "display": "VideoReplay",
+    "fields": {
+        "ABk": {
+            "caption": "record",
+            "editor": "DynamicValue",
+            "name": "record",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "icon": "ion-android-checkbox-blank",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    }
+}

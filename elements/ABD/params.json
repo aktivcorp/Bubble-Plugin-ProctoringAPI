@@ -1,0 +1,70 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 120,
+        "width": 160
+    },
+    "display": "VideoWowza",
+    "events": {
+        "ABM": {
+            "caption": "newRecord",
+            "name": "newRecord"
+        }
+    },
+    "fields": {
+        "ABO": {
+            "caption": "id",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 0,
+            "value": "text"
+        },
+        "ABP": {
+            "caption": "type",
+            "editor": "DynamicValue",
+            "name": "type",
+            "rank": 1,
+            "value": "text"
+        },
+        "ABQ": {
+            "caption": "client",
+            "editor": "DynamicValue",
+            "name": "client",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "ABR": {
+            "caption": "exam",
+            "editor": "DynamicValue",
+            "name": "exam",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "ABS": {
+            "caption": "proctor",
+            "editor": "DynamicValue",
+            "name": "proctor",
+            "optional": true,
+            "rank": 4,
+            "value": "text"
+        }
+    },
+    "icon": "ion-ios-camera",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "ABN": {
+            "caption": "recordName",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "recordName",
+            "value": "text"
+        }
+    }
+}

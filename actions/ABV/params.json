@@ -1,0 +1,21 @@
+{
+    "category": "plugins",
+    "display": "examFinish",
+    "fields": {
+        "ABW": {
+            "caption": "client",
+            "editor": "DynamicValue",
+            "name": "client",
+            "rank": 0,
+            "value": "text"
+        },
+        "ABX": {
+            "caption": "exam",
+            "editor": "DynamicValue",
+            "name": "exam",
+            "rank": 1,
+            "value": "text"
+        }
+    },
+    "type": "client_side"
+}

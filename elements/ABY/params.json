@@ -1,0 +1,88 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 400,
+        "width": 400
+    },
+    "display": "Replay",
+    "fields": {
+        "ABZ": {
+            "caption": "client",
+            "editor": "DynamicValue",
+            "name": "client",
+            "rank": 0,
+            "value": "text"
+        },
+        "ABa": {
+            "caption": "exam",
+            "editor": "DynamicValue",
+            "name": "exam",
+            "rank": 1,
+            "value": "text"
+        }
+    },
+    "icon": "ion-android-checkbox-blank",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "ABb": {
+            "caption": "student_media",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "student_media",
+            "value": "text"
+        },
+        "ABc": {
+            "caption": "proctor_media",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "proctor_media",
+            "value": "text"
+        },
+        "ABd": {
+            "caption": "student_screen",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "student_screen",
+            "value": "text"
+        },
+        "ABl": {
+            "caption": "current_second",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "current_second",
+            "value": "text"
+        },
+        "ABm": {
+            "caption": "student_media_wait",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "student_media_wait",
+            "value": "text"
+        },
+        "ABn": {
+            "caption": "proctor_media_wait",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "proctor_media_wait",
+            "value": "text"
+        },
+        "ABo": {
+            "caption": "student_screen_wait",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "student_screen_wait",
+            "value": "text"
+        }
+    }
+}

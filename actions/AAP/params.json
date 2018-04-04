@@ -1,0 +1,49 @@
+{
+    "category": "plugins",
+    "display": "examCreate",
+    "fields": {
+        "AAQ": {
+            "caption": "student",
+            "editor": "DynamicValue",
+            "name": "student",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAR": {
+            "caption": "proctor",
+            "editor": "DynamicValue",
+            "name": "proctor",
+            "rank": 1,
+            "value": "text"
+        },
+        "AAS": {
+            "caption": "title",
+            "editor": "DynamicValue",
+            "name": "title",
+            "rank": 2,
+            "value": "text"
+        },
+        "AAT": {
+            "caption": "start_date",
+            "editor": "DynamicValue",
+            "name": "start_date",
+            "rank": 3,
+            "value": "text"
+        },
+        "AAU": {
+            "caption": "external_id",
+            "editor": "DynamicValue",
+            "name": "external_id",
+            "rank": 4,
+            "value": "text"
+        },
+        "AAV": {
+            "caption": "client",
+            "editor": "DynamicValue",
+            "name": "client",
+            "rank": 5,
+            "value": "text"
+        }
+    },
+    "type": "client_side"
+}

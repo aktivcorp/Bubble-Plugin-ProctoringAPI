@@ -1,0 +1,48 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 200,
+        "width": 200
+    },
+    "display": "ReplayCtrl",
+    "icon": "ion-android-checkbox-blank",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "ABv": {
+            "caption": "current_second",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "current_second",
+            "value": "text"
+        },
+        "ABw": {
+            "caption": "student_media",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "student_media",
+            "value": "text"
+        },
+        "ABx": {
+            "caption": "proctor_media",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "proctor_media",
+            "value": "text"
+        },
+        "ABy": {
+            "caption": "student_screen",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "student_screen",
+            "value": "text"
+        }
+    }
+}

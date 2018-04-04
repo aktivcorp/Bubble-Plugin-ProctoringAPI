@@ -1,0 +1,40 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 20,
+        "width": 100
+    },
+    "display": "ExamStudent",
+    "events": {
+        "AAp": {
+            "caption": "started",
+            "name": "started"
+        },
+        "ABe": {
+            "caption": "finished",
+            "name": "finished"
+        }
+    },
+    "fields": {
+        "AAn": {
+            "caption": "client",
+            "editor": "DynamicValue",
+            "name": "client",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAo": {
+            "caption": "exam",
+            "editor": "DynamicValue",
+            "name": "exam",
+            "rank": 1,
+            "value": "text"
+        }
+    },
+    "icon": "ion-android-notifications-none",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    }
+}

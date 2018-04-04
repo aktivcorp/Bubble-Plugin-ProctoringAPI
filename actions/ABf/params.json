@@ -1,0 +1,28 @@
+{
+    "category": "plugins",
+    "display": "examComment",
+    "fields": {
+        "ABg": {
+            "caption": "exam",
+            "editor": "DynamicValue",
+            "name": "exam",
+            "rank": 0,
+            "value": "text"
+        },
+        "ABh": {
+            "caption": "client",
+            "editor": "DynamicValue",
+            "name": "client",
+            "rank": 1,
+            "value": "text"
+        },
+        "ABi": {
+            "caption": "comment",
+            "editor": "DynamicValue",
+            "name": "comment",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "client_side"
+}

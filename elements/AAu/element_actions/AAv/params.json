@@ -1,0 +1,33 @@
+{
+    "caption": "init",
+    "fields": {
+        "AAw": {
+            "caption": "client",
+            "editor": "DynamicValue",
+            "name": "client",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAx": {
+            "caption": "exam",
+            "editor": "DynamicValue",
+            "name": "exam",
+            "rank": 1,
+            "value": "text"
+        },
+        "AAy": {
+            "caption": "opponent",
+            "editor": "DynamicValue",
+            "name": "opponent",
+            "rank": 2,
+            "value": "text"
+        },
+        "AAz": {
+            "caption": "me",
+            "editor": "DynamicValue",
+            "name": "me",
+            "rank": 3,
+            "value": "text"
+        }
+    }
+}

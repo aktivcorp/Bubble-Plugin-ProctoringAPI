@@ -1,0 +1,20 @@
+{
+    "caption": "init",
+    "fields": {
+        "ABF": {
+            "caption": "id",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 0,
+            "value": "text"
+        },
+        "ABG": {
+            "caption": "type",
+            "default_val": "media_out",
+            "doc": "media_out, screen_out, media_in, screen_in",
+            "editor": "StaticText",
+            "name": "type",
+            "rank": 1
+        }
+    }
+}

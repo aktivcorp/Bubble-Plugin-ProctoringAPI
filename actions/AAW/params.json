@@ -1,0 +1,50 @@
+{
+    "category": "plugins",
+    "display": "timelineCreate",
+    "fields": {
+        "AAX": {
+            "caption": "client",
+            "editor": "DynamicValue",
+            "name": "client",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAY": {
+            "caption": "user",
+            "editor": "DynamicValue",
+            "name": "user",
+            "rank": 1,
+            "value": "text"
+        },
+        "AAZ": {
+            "caption": "exam",
+            "editor": "DynamicValue",
+            "name": "exam",
+            "rank": 2,
+            "value": "text"
+        },
+        "AAa": {
+            "caption": "entity",
+            "editor": "DynamicValue",
+            "name": "entity",
+            "rank": 3,
+            "value": "text"
+        },
+        "AAb": {
+            "caption": "content",
+            "editor": "DynamicValue",
+            "name": "content",
+            "rank": 4,
+            "value": "text"
+        },
+        "AAc": {
+            "caption": "extra",
+            "editor": "DynamicValue",
+            "name": "extra",
+            "optional": true,
+            "rank": 5,
+            "value": "text"
+        }
+    },
+    "type": "client_side"
+}

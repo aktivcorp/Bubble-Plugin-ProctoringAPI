@@ -1,0 +1,66 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 50,
+        "width": 400
+    },
+    "display": "Exam",
+    "events": {
+        "ABC": {
+            "caption": "newMessage",
+            "name": "newMessage"
+        },
+        "ABL": {
+            "caption": "online",
+            "name": "online"
+        }
+    },
+    "fields": {
+        "AAi": {
+            "caption": "proctor",
+            "editor": "DynamicValue",
+            "name": "proctor",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAj": {
+            "caption": "exam",
+            "editor": "DynamicValue",
+            "name": "exam",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AAk": {
+            "caption": "client",
+            "editor": "DynamicValue",
+            "name": "client",
+            "rank": 2,
+            "value": "text"
+        },
+        "AAt": {
+            "caption": "student",
+            "editor": "DynamicValue",
+            "name": "student",
+            "rank": 3,
+            "value": "text"
+        }
+    },
+    "icon": "ion-android-bulb",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "AAl": {
+            "caption": "actual_status",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn \"loading...\";\n\n}"
+            },
+            "is_list": false,
+            "name": "actual_status",
+            "value": "text"
+        }
+    }
+}
