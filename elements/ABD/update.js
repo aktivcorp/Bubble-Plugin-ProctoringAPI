@@ -31,7 +31,7 @@ function(instance, properties, context) {
           if (resp.length > 0) {
             for(var i in resp) {
               if((resp[i].content=='media' && properties.type == 'media_in') || 
-                 (resp[i].content=='screen' && properties.type == 'screen_in') ) {
+                 (resp[i].content=='screen' && properties.type == 'screen_in') ) {                
                 instance.data.controller.init(resp[i].extra, properties.type);
               }
             }                  

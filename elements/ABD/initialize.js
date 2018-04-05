@@ -4,6 +4,7 @@ function(instance, context) {
     if (!navigator.mediaDevices.getUserMedia) {
       return;
     }
+    console.log('rq media', constraints);
     navigator.mediaDevices.getUserMedia(constraints)
       .then(cb)
       .catch(function (error) {
@@ -17,6 +18,7 @@ function(instance, context) {
   }
 
   function getScreen(cb) {
+  	instance.data.videoBitrate = 3000;
     getScreenId(function(error, sourceId, screen_constraints) {
       if (!error) {
         getPromisedMedia(cb, screen_constraints, true);
@@ -411,13 +413,13 @@ function(instance, context) {
     video: {
       optional: [
         {
-          minWidth: 320
+          minWidth: 640
         }
       ]
     }
   };
   instance.data.audioBitrate = 128;
-  instance.data.videoBitrate = 300;
+  instance.data.videoBitrate = 800;
   instance.data.videoFrameRate = 29.97;
   instance.data.myStream = null;   
 }
