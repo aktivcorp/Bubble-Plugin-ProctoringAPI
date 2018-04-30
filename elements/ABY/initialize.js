@@ -5,4 +5,7 @@ function(instance, context) {
     instance.data.rptl.width(instance.data.widthrptl + 'px');
     instance.data.rptl.height('50px');
     instance.canvas.append(instance.data.rptl);
+  
+  instance.data.tmInterval = null;
+  instance.data.tmTo = [];
 }

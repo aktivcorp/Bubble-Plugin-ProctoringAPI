@@ -7,6 +7,22 @@
     },
     "display": "VideoReplay",
     "fields": {
+        "AAE": {
+            "caption": "width",
+            "editor": "DynamicValue",
+            "name": "width",
+            "optional": true,
+            "rank": 2,
+            "value": "number"
+        },
+        "AAF": {
+            "caption": "height",
+            "editor": "DynamicValue",
+            "name": "height",
+            "optional": true,
+            "rank": 1,
+            "value": "number"
+        },
         "ABk": {
             "caption": "record",
             "editor": "DynamicValue",
