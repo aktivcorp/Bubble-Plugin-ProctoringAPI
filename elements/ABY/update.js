@@ -6,7 +6,14 @@ function(instance, properties, context) {
 
   body = 'client='+properties.client;    
   body += '&exam='+properties.exam;
-
+  
+  if (instance.data.tmInterval != null) clearInterval(instance.data.tmInterval);
+  for (var t in instance.data.tmTo) {
+    clearTimeout(instance.data.tmTo[t]);
+  }
+  instance.data.tmInterval = null;
+  instance.data.tmTo = [];  
+  
   xhr.open("POST", 'https://'+context.keys.api_host+'/timeline/replay', true);
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
@@ -22,7 +29,7 @@ function(instance, properties, context) {
           if (!start_ts) {
             start_ts = resp[i].ts;
             var seconds_Counter = 0;
-            setInterval(function() {
+            instance.data.tmInterval = setInterval(function() {
               seconds_Counter++;
               instance.publishState('current_second', ''+seconds_Counter);              
             }, 1000);
@@ -34,10 +41,10 @@ function(instance, properties, context) {
           (function(st,tk,dl) {
             instance.publishState(st+'_wait', ''+delay);
             console.log(st+'_wait', ''+delay);
-            setTimeout(function() {
+            instance.data.tmTo.push(setTimeout(function() {
               instance.publishState(st+'_wait', null);
               instance.publishState(st, tk+(st.match('media')?'_aac.mp4':'_screen.mp4'));
-            }, dl);  
+            }, dl));  
           })(state,token,delay*1000);          
         }
       }                  

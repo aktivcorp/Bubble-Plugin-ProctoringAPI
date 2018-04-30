@@ -6,6 +6,22 @@
         "width": 200
     },
     "display": "ReplayCtrl",
+    "fields": {
+        "AAC": {
+            "caption": "client",
+            "editor": "DynamicValue",
+            "name": "client",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAD": {
+            "caption": "exam",
+            "editor": "DynamicValue",
+            "name": "exam",
+            "rank": 1,
+            "value": "text"
+        }
+    },
     "icon": "ion-android-checkbox-blank",
     "property_applications": {
         "MinWidth": true,

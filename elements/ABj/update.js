@@ -1,7 +1,7 @@
 function(instance, properties, context) {
   if (!instance.data.videoP) {
-    instance.data.heightmyvideo = instance.canvas[0].offsetHeight;
-    instance.data.widthmyvideo = instance.canvas[0].offsetWidth;
+    instance.data.heightmyvideo = properties.height || instance.canvas[0].offsetHeight;
+    instance.data.widthmyvideo = properties.width || instance.canvas[0].offsetWidth;
 
     instance.data.videoP = $('<video></video>');
     instance.data.videoP.attr('autoplay', true);        
