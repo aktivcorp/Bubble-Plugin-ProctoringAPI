@@ -1,4 +1,5 @@
-function(instance, properties, context) {
+function(instance, properties, context) {   
+  console.log('TestChat init', properties.exam, properties.client);
   
   var xhr = new XMLHttpRequest();
 
@@ -24,13 +25,22 @@ function(instance, properties, context) {
 
   xhr.send(body);
 
-  var client = new BroadcastHubClient({server: 'https://'+context.keys.api_host+':8443/sockets/'});
-  client.subscribe(properties.exam);
-  client.on('message:'+properties.exam, function (message) {
+  if (instance.data.client) {
+    console.log('TextChat close old hub connection')
+    instance.data.client.disconnect();
+    instance.data.client = null;
+  }
+
+  instance.data.client = new BroadcastHubClient(
+    {server: 'https://'+context.keys.api_host+':8443/sockets/', auth: 'TextChat'});  
+    
+  instance.data.client.on('message:'+properties.exam, function (message) {
       received = JSON.parse(message);
       if(received.entity == 'message') {      
         instance.canvas.append($('<p><b>'+received.extra+':</b> '+received.content+'</p>'));
       }
   });
-
+  
+  instance.data.client.subscribe(properties.exam);  
+  console.log('TextChat inited on', instance.data.client.client._server);  
 }

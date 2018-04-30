@@ -7,7 +7,7 @@ function(properties, context) {
     body += '&entity='+encodeURIComponent(properties.entity);
     body += '&content='+encodeURIComponent(properties.content);
     body += '&extra='+encodeURIComponent(properties.extra);
-
+ 
     xhr.open("POST", 'https://'+context.keys.api_host+'/timeline/add', true)
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
     xhr.send(body);

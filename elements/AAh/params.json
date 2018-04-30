@@ -14,6 +14,14 @@
         "ABL": {
             "caption": "online",
             "name": "online"
+        },
+        "ACT": {
+            "caption": "media",
+            "name": "media"
+        },
+        "ACU": {
+            "caption": "screen",
+            "name": "screen"
         }
     },
     "fields": {
@@ -60,6 +68,22 @@
             },
             "is_list": false,
             "name": "actual_status",
+            "value": "text"
+        },
+        "ACF": {
+            "caption": "media",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "media",
+            "value": "text"
+        },
+        "ACG": {
+            "caption": "screen",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "screen",
             "value": "text"
         }
     }

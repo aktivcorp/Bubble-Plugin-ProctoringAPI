@@ -1,0 +1,26 @@
+{
+    "caption": "init",
+    "fields": {
+        "ACO": {
+            "caption": "client",
+            "editor": "DynamicValue",
+            "name": "client",
+            "rank": 0,
+            "value": "text"
+        },
+        "ACP": {
+            "caption": "exam",
+            "editor": "DynamicValue",
+            "name": "exam",
+            "rank": 1,
+            "value": "text"
+        },
+        "ACV": {
+            "caption": "proctor",
+            "editor": "DynamicValue",
+            "name": "proctor",
+            "rank": 2,
+            "value": "text"
+        }
+    }
+}
