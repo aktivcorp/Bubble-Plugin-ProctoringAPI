@@ -6,6 +6,7 @@
         "width": 400
     },
     "display": "TextChat",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1526371046839x207093400415033100/favicon.ico",
     "icon": "ion-android-checkbox-blank",
     "property_applications": {
         "MinWidth": true,

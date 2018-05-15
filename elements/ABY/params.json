@@ -6,6 +6,7 @@
         "width": 400
     },
     "display": "Replay",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1526371056243x593353814212605300/favicon.ico",
     "fields": {
         "ABZ": {
             "caption": "client",

@@ -6,6 +6,7 @@
         "width": 400
     },
     "display": "Exam",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1526371035455x750880263280123500/favicon.ico",
     "events": {
         "ABC": {
             "caption": "newMessage",

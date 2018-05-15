@@ -6,6 +6,7 @@
         "width": 320
     },
     "display": "VideoReplay",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1526371060571x684407948516309200/favicon.ico",
     "fields": {
         "AAE": {
             "caption": "width",

@@ -6,6 +6,7 @@
         "width": 100
     },
     "display": "ExamStudent",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1526371042179x890296411933377400/favicon.ico",
     "events": {
         "AAp": {
             "caption": "started",

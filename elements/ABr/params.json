@@ -6,6 +6,7 @@
         "width": 100
     },
     "display": "TestPubSub",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1526371064531x260213092900812640/favicon.ico",
     "icon": "ion-android-checkbox-blank",
     "property_applications": {
         "MinWidth": true,

@@ -6,6 +6,7 @@
         "width": 160
     },
     "display": "VideoWowza",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1526371052103x473225634545087800/favicon.ico",
     "events": {
         "ABM": {
             "caption": "newRecord",
