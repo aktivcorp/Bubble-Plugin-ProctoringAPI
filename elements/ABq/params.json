@@ -6,6 +6,7 @@
         "width": 200
     },
     "display": "ReplayCtrl",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1526372343143x693490406498313000/favicon.ico",
     "fields": {
         "AAC": {
             "caption": "client",

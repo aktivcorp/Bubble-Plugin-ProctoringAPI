@@ -5,6 +5,7 @@
             "caption": "client",
             "editor": "DynamicValue",
             "name": "client",
+            "optional": true,
             "rank": 0,
             "value": "text"
         },
