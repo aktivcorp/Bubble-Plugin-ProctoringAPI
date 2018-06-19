@@ -9,7 +9,7 @@ function(instance, properties, context) {
 
   instance.data.client = new BroadcastHubClient({
     server: 'https://'+context.keys.api_host+':8443/sockets/',
-    auth: 'ExamStudent'
+    auth: properties.student
   });  
   
   console.log('ExamStudent inited on', instance.data.client.client._server);
@@ -20,6 +20,15 @@ function(instance, properties, context) {
   if(properties.exam && properties.client) {
     if (!instance.data.client._channels[0]) {
       instance.data.client.on('message:'+properties.exam, function (message) {
+        if (message.match(/online:/) && message.match(properties.proctor)) {
+          //instance.publishState("actual_status", 'online');    
+          //instance.triggerEvent("online");
+          return;
+        } else if (message.match(/offline:/) && message.match(properties.proctor)) {
+          //instance.publishState("actual_status", 'offline');    
+          //instance.triggerEvent("offline");    
+          return;
+        }
         received = JSON.parse(message);
         if(received.entity == 'exam' && received.content == 'start') {      
           instance.triggerEvent("started");

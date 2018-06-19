@@ -1,6 +1,13 @@
 {
     "caption": "init",
     "fields": {
+        "AAN": {
+            "caption": "student",
+            "editor": "DynamicValue",
+            "name": "student",
+            "rank": 1,
+            "value": "text"
+        },
         "ACO": {
             "caption": "client",
             "editor": "DynamicValue",
@@ -13,14 +20,14 @@
             "caption": "exam",
             "editor": "DynamicValue",
             "name": "exam",
-            "rank": 1,
+            "rank": 2,
             "value": "text"
         },
         "ACV": {
             "caption": "proctor",
             "editor": "DynamicValue",
             "name": "proctor",
-            "rank": 2,
+            "rank": 3,
             "value": "text"
         }
     }

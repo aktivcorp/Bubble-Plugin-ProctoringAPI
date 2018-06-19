@@ -32,9 +32,18 @@ function(instance, properties, context) {
   }
 
   instance.data.client = new BroadcastHubClient(
-    {server: 'https://'+context.keys.api_host+':8443/sockets/', auth: 'TextChat'});  
+    {server: 'https://'+context.keys.api_host+':8443/sockets/', auth: properties.user});  
     
   instance.data.client.on('message:'+properties.exam, function (message) {
+    	if (message.match(/online:/) && message.match(properties.opponent)) {
+          //instance.publishState("actual_status", 'online');    
+          //instance.triggerEvent("online");
+          return;
+        } else if (message.match(/offline:/) && message.match(properties.opponent)) {
+          //instance.publishState("actual_status", 'offline');    
+          //instance.triggerEvent("offline");    
+          return;
+        }
       received = JSON.parse(message);
       if(received.entity == 'message') {      
         instance.canvas.append($('<p><b>'+received.extra+':</b> '+received.content+'</p>'));
