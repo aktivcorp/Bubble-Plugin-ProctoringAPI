@@ -33,6 +33,11 @@ function(instance, properties, context) {
 
   instance.data.client = new BroadcastHubClient(
     {server: 'https://'+context.keys.api_host+':8443/sockets/', auth: properties.user});  
+  
+  setTimeout(function() {    
+    instance.data.client.subscribe(properties.exam);
+    console.log('SockJS transport (TextChat)', instance.data.client.client.transport);
+  }, 4000);
     
   instance.data.client.on('message:'+properties.exam, function (message) {
     	if (message.match(/online:/) && message.match(properties.opponent)) {
@@ -49,7 +54,6 @@ function(instance, properties, context) {
         instance.canvas.append($('<p><b>'+received.extra+':</b> '+received.content+'</p>'));
       }
   });
-  
-  instance.data.client.subscribe(properties.exam);  
+    	  
   console.log('TextChat inited on', instance.data.client.client._server);  
 }

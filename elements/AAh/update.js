@@ -29,15 +29,16 @@ function(instance, properties, context) {
     console.log('Exam inited on', instance.data.client.client._server);
     setTimeout(function() {
       console.log('SockJS transport (Exam)', instance.data.client.client.transport);
+      instance.data.client.subscribe(properties.exam);
     }, 4000);
     
     
     var xhr1 = new XMLHttpRequest();
     var body = '';
 
-    body = 'client='+properties.client;    
+    body = 'client='+properties.client;
     body += '&exam='+properties.exam;
-    body += '&proctor='+properties.proctor;    
+    body += '&proctor='+properties.proctor;
 
     xhr1.open("POST", 'https://'+context.keys.api_host+'/timeline/streams', true);
     xhr1.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -80,7 +81,6 @@ function(instance, properties, context) {
             instance.data.fire(received.content, received.extra);
           }
         }
-      });
-      instance.data.client.subscribe(properties.exam);
+      });      
   }
 }

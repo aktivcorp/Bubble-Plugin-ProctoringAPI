@@ -13,7 +13,8 @@ function(instance, properties, context) {
   });  
   
   console.log('ExamStudent inited on', instance.data.client.client._server);
-  setTimeout(function() {
+  setTimeout(function() {    
+    instance.data.client.subscribe(properties.exam);
     console.log('SockJS transport (ExamStudent)', instance.data.client.client.transport);
   }, 4000);
   
@@ -47,9 +48,7 @@ function(instance, properties, context) {
             instance.triggerEvent("proctorMedia");
           }
         }
-      });
-      
-      instance.data.client.subscribe(properties.exam);
+      });      
     }    
   }
 
