@@ -8,6 +8,14 @@
     "display": "VideoWowza",
     "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1526371052103x473225634545087800/favicon.ico",
     "events": {
+        "AAR": {
+            "caption": "noCamera",
+            "name": "noCamera"
+        },
+        "AAS": {
+            "caption": "noAudio",
+            "name": "noAudio"
+        },
         "ABM": {
             "caption": "newRecord",
             "name": "newRecord"

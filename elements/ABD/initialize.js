@@ -6,16 +6,23 @@ function(instance, context) {
             return;
         }
         console.log('rq media', constraints);
-        navigator.mediaDevices.getUserMedia(constraints)
-            .then(cb)
-            .catch(function (error) {
-                if (error && error.name == 'DevicesNotFoundError' && constraints.video && !noFallbackToAudioOnly) {
-                    constraints.video = false;
-                    getPromisedMedia(cb, constraints, true);
-                } else {
-                    console.log(error.name);
-                }
-            });
+        var audioinput = false;
+        var videoinput = false;
+      	navigator.mediaDevices.enumerateDevices().then(function(list) {
+          list.forEach(function(e) {
+            console.log(e.kind);
+			if (e.kind == 'audioinput') { audioinput = true; }
+          	if (e.kind == 'videoinput') { videoinput = true; }
+          });
+          if (!videoinput) instance.triggerEvent("noCamera");                  
+		  if (!audioinput) instance.triggerEvent("noAudio");                  
+          
+          navigator.mediaDevices.getUserMedia(constraints)
+          .then(cb)
+          .catch(function (error) {
+          	console.log('ERROR getUserMedia', error.name);
+          });
+        });               
     }
 
     function getScreen(cb) {
@@ -237,7 +244,12 @@ function(instance, context) {
         };
 
         connection.ws.onmessage = function (evt) {
-            var msgJSON = JSON.parse(evt.data);
+          	var msgJSON = '';  
+          	try {
+              msgJSON = JSON.parse(evt.data);
+            } catch (e) {
+              return;
+            }
             var msgStatus = Number(msgJSON['status']);
             var msgCommand = msgJSON['command'];
 

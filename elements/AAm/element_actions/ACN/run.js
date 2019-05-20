@@ -30,7 +30,14 @@ function(instance, properties, context) {
           //instance.triggerEvent("offline");    
           return;
         }
-        received = JSON.parse(message);
+        
+        var received = '';
+        try {
+          received = JSON.parse(message);
+        } catch (e) {
+          return;
+        }
+        
         if(received.entity == 'exam' && received.content == 'start') {      
           instance.triggerEvent("started");
         } else if(received.entity == 'exam' && received.content == 'finished') {      

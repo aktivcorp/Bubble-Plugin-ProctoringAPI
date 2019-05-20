@@ -17,4 +17,10 @@ function(properties, context) {
     xhr.open("POST", 'https://'+context.keys.api_host+'/auth/create', true)
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
     xhr.send(body);
+    xhr.onload = function () {
+        if (xhr.readyState === xhr.DONE) {
+            console.log('API','AUTHCREATE',xhr.status,xhr.response,properties.username);
+        }
+    };
+
 }

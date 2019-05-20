@@ -71,7 +71,12 @@ function(instance, properties, context) {
           instance.triggerEvent("offline");    
           return;
         }
-        var received = JSON.parse(message);
+        var received = '';
+        try {
+          received = JSON.parse(message);
+        } catch (e) {
+          return;
+        }
       	if (received.entity == 'message') {
           	instance.triggerEvent('newMessage');
         } else if(received.entity == 'stream'  && received.user == properties.student) {    

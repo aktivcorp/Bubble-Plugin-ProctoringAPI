@@ -1,4 +1,6 @@
 function(instance, properties, context) {
+  console.log('init wowza action: ', properties.id, properties.type);  
+    
   if (properties.id && properties.id != 'null') {
     instance.data.heightmyvideo = instance.canvas[0].offsetHeight;
     instance.data.widthmyvideo = instance.canvas[0].offsetWidth;
