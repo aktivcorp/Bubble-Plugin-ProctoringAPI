@@ -27,11 +27,25 @@ function(instance, context) {
 
     function getScreen(cb) {
         instance.data.videoBitrate = 3000;
-        getScreenId(function(error, sourceId, screen_constraints) {
-            if (!error) {
-                getPromisedMedia(cb, screen_constraints, true);
-            }
-        });
+        if(navigator.mediaDevices.getDisplayMedia) {
+            navigator.mediaDevices.getDisplayMedia({
+                video: true
+            })
+            .then(cb)
+            .catch(function(error) {
+                console.log('ERROR getDisplayMedia', error.name);
+            });
+            this.newAPI = false;
+        }
+        else if(navigator.getDisplayMedia) {
+            navigator.getDisplayMedia({
+                video: true
+            })
+            .then(cb)
+			.catch(function (error) {
+                console.log('ERROR getDisplayMedia', error.name);
+            });
+        }
     }
 
     function initiateMediaStream(cb, constraints, noFallbackToAudioOnly) {
